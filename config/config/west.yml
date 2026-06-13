@@ -1,0 +1,33 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: antoinegs
+      url-base: https://github.com/AntoineGS
+    # ---- ドングル構成で必要になる remote ----
+    # - name: badjeff
+    #   url-base: https://github.com/badjeff
+
+  projects:
+    # ZMK 本体 (v0.3 ピン留め。Zephyr 4.1 への破壊的変更を避けるため)
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3
+      import: app/west.yml
+
+    # ---- ドングル構成で必要になるモジュール群 ----
+    # - name: zmk-split-peripheral-input-relay
+    #   remote: badjeff
+    #   revision: main
+    #
+    # - name: zmk-input-behavior-listener
+    #   remote: badjeff
+    #   revision: main
+    #
+    # - name: zmk-pmw3610-driver-badjeff
+    #   remote: badjeff
+    #   revision: main
+    #   path: modules/zmk-pmw3610-driver-badjeff
+
+  self:
+    path: config

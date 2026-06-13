@@ -1,0 +1,19 @@
+// ============================================================
+// config/totem_right.overlay
+// 右半分 (Peripheral) XIAO nRF52840 オーバーレイ
+// ※ PMW3610（トラックボール）非搭載版
+// ============================================================
+
+// ---- ADC: バッテリー電圧読み取り ----
+&adc {
+    status = "okay";
+};
+
+ / {
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 7>;
+        output-ohms = <2000000>;
+        full-ohms = <(2000000 + 806000)>;
+    };
+};
