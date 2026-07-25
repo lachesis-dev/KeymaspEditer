@@ -1,4 +1,4 @@
-// 利便性を考えて、デフォルトではなくhttps://jurf.github.io/2023/07/11/60-percent-miryoku/ベース　Mityoku（QWERTY）配列
+// 利便性を考えて、デフォルトではなくhttps://github.com/note96e/thorium/ ベース　Mityoku（QWERTY）配列
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/rgbled_widget.dtsi>
