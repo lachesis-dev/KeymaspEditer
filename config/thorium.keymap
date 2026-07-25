@@ -1,143 +1,132 @@
-// 利便性を考えて、デフォルトではなくhttps://jurf.github.io/2023/07/11/60-percent-miryoku/ベース　Mityoku（QWERTY）配列
-
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <behaviors/rgbled_widget.dtsi>
-
-&mt {
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <125>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <300>;
-};
-
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        back {
-            bindings = <&kp DEL>;
-            key-positions = <8 9>;
-            layers = <0 1 2 6>;
-        };
-        
-        ZenHan {
-            bindings = <&kp LANG_ZENKAKUHANKAKU>;
-            key-positions = <12 13>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        // ─────────────────────────────
-        // BASE（jurf 60% Miryoku　Base）
-        // ─────────────────────────────
         base_layer {
-
-            display-name = "BASE";
-
             bindings = <
-            &kp Q           &kp W           &kp E           &kp R             &kp T             &kp Y       &kp U               &kp I            &kp O            &kp P
-            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D     &mt LEFT_SHIFT F  &kp G             &kp H       &mt RIGHT_SHIFT J   &mt RCTRL K      &mt RIGHT_ALT L  &kp FSLH
-&mo 5       &kp Z           &kp X           &kp C           &kp V             &kp B             &kp N       &kp M               &kp COMMA        &kp DOT          &kp FSLH         &kp FSLH
-                                            &lt 1 SPACE     &lt 3 RET         &lt 6 BACKSPACE    &lt 2 SPACE    &kp ENTER          &kp BACKSPACE
+                // 左手
+                &kp Q &kp W &kp E &kp R &kp T
+                &kp A &kp S &kp D &kp F &kp G
+                &kp Z &kp X &kp C &kp V &kp B
+                &mo LOWER &mt LCTL SPC
+
+                // 右手
+                &kp Y &kp U &kp I &kp O &kp P
+                &kp H &kp J &kp K &kp L &kp SEMI
+                &kp N &kp M &kp COMMA &kp DOT &mt FUNC SLASH
+                &mt RSFT SPC &mo RAISE
             >;
         };
 
-        // ─────────────────────────────
-        // NAVI
-        // ─────────────────────────────
-        nav_layer {
-
-            display-name = "NAVI";
-
+        num_layer {
             bindings = <
-        &kp ESC    &trans     &trans    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &trans     &trans    &trans     &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                              &trans    &trans     &trans      &mo 6     &kp KP_N0  &trans
+                // 左手
+                &kp KP_SLASH &kp KP_7 &kp KP_8 &kp KP_9 &kp KP_MINUS
+                &kp KP_ASTERISK &kp KP_4 &kp KP_5 &kp KP_6 &kp KP_PLUS
+                &kp TAB &kp KP_1 &kp KP_2 &kp KP_3 &kp KP_ENTER
+                &mo LOWER &mt LCTL SPC
+
+                // 右手
+                &kp KP_0 &kp KP_DOT &kp KP_EQUAL &kp KP_COMMA &kp KP_COLON
+                &kp KP_LEFT_PAREN &kp KP_RIGHT_PAREN &kp KP_LEFT_BRACKET &kp KP_RIGHT_BRACKET &kp KP_BSLH
+                &kp KP_MINUS &kp KP_PLUS &kp KP_ASTERISK &kp KP_SLASH &kp KP_ENTER
+                &mt FUNC SLASH &tog NUM
             >;
         };
 
-        // ─────────────────────────────
-        // SYM
-        // ─────────────────────────────
-        sim_layer {
-
-            display-name = "SYM";
+        lower_layer {
             bindings = <
-        &kp EXCL     &kp DOUBLE_QUOTES  &kp HASH   &kp DLLR        &kp PRCNT    &kp AMPERSAND  &kp SINGLE_QUOTE  &kp MINUS      &kp CARET      &kp BACKSLASH
-        &kp RA(A)    &kp LEFT_ALT       &kp LCTRL  &kp LEFT_SHIFT  &trans       &kp PIPE       &kp RIGHT_SHIFT   &kp RCTRL      &kp RIGHT_ALT  &kp UNDERSCORE
-&trans  &kp RA(F18)  &kp RA(F19)        &trans     &trans          &trans       &trans         &trans            &kp SEMICOLON  &kp COLON      &kp BSLH        &kp AT_SIGN
-                                        &trans     &trans          &mo 6        &trans         &trans            &trans
+                // 左手
+                &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT
+                &kp CAPS &kp TAB &kp BSPC &kp ESC &kp DEL
+                &kp LSFT &kp LCTL &kp LALT &kp LGUI &kp PSCR
+                &mo LOWER &mt LCTL SPC
+
+                // 右手
+                &kp CARET &kp AMPERSAND &kp ASTERISK &kp INS &kp PAUSE
+                &none &kp MINUS &kp PLUS &kp PIPE &kp DQT
+                &kp TILDE &kp RGUI &kp RALT &kp RCTL &kp RSFT
+                &kp ENT &mt ADJUST ENT
             >;
         };
 
-        // ─────────────────────────────
-        // KeyMove
-        // ─────────────────────────────
-        kmov_layer {
-
-            display-name= "KeyMove";
-
+        raise_layer {
             bindings = <
-        &trans        &trans        &trans     &trans          &kp C_PREVIOUS    &kp C_VOLUME_UP    &kp HOME  &trans        &kp PAGE_UP    &trans
-        &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp C_PP          &kp C_VOLUME_DOWN  &kp LEFT  &kp UP_ARROW  &kp RIGHT      &trans
-&trans  &trans        &trans        &trans     &trans          &kp C_NEXT        &kp K_MUTE         &kp END   &kp DOWN      &kp PAGE_DOWN  &trans  &trans
-                                    &trans     &trans          &trans            &trans             &trans    &trans
+                // 左手
+                &kp 1 &kp 2 &kp 3 &kp 4 &kp 5
+                &kp LEFT_PAREN &kp RIGHT_PAREN &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_BRACE
+                &kp LSFT &kp LCTL &kp LALT &kp LGUI &none
+                &mt LMOD LANG0 &trans
+
+                // 右手
+                &kp 6 &kp 7 &kp 8 &kp 9 &kp 0
+                &kp RIGHT_BRACE &kp MINUS &kp EQUAL &kp BSLH &kp GRAVE
+                &kp ENT &mt ADJUST ENT &trans &trans &trans
+                &mt FUNC SLASH &mo RAISE
             >;
         };
 
-        // ─────────────────────────────
-        // MouseMove
-        // ─────────────────────────────
-        mmov_layer {
-
-            display-name= "MouseMove";
-            
+        func_layer {
             bindings = <
-       &none         &mkp LCLK     &mkp MCLK  &mkp RCLK   &none     &none   &mkp LCLK       &mkp MCLK       &mkp RCLK        &msc SCRL_UP
-       &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHIFT  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&none  &none         &none         &none      &none       &none     &none   &none           &mmv MOVE_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &none
-                                   &trans     &trans      &trans    &trans  &trans          &trans
+                // 左手
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
+                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+                &kp LSFT &kp LCTL &kp LALT &kp LGUI &mt ADJUST ENT
+                &none &none
+
+                // 右手
+                &kp F11 &kp F12 &kp UP &kp HOME &kp END
+                &kp PGUP &kp LEFT &kp RIGHT &kp RCTL &tog NUM
+                &kp PGDN &kp DOWN &kp RCTL &kp RSFT &none
+                &kp RALT &kp RGUI
             >;
         };
 
-        // ─────────────────────────────
-        // BLT
-        // ─────────────────────────────
-        blt_layer {
-            display-name = "BlueTooth INIT";
-            
+        lmod_layer {
             bindings = <
-            &bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &sys_reset  &bootloader  &studio_unlock  &trans  &trans
-            &bt BT_PRV  &bt BT_SEL 4  &trans        &ind_bat      &ind_con         &trans      &trans       &trans          &trans  &trans
-    &trans  &bt BT_CLR  &trans        &trans        &trans        &out OUT_TOG     &trans      &trans       &trans          &trans  &trans  &trans
-                                      &trans        &trans        &trans           &trans      &trans       &trans
+                // 左手
+                &kp VOLDN &kp VOLUP &kp MUTE &none &none
+                &kp PREV &kp PLAY &kp NEXT &none &none
+                &kp Y &kp U &kp I &kp O &kp P
+                &mo LOWER &mt LCTL SPC
+
+                // 右手
+                &kp H &kp J &kp K &kp L &kp SEMI
+                &kp N &kp M &kp COMMA &kp DOT &kp SLASH
+                &kp RALT &kp RGUI &kp RCTL &kp RSFT &none
+                &mt FUNC SLASH &mo RAISE
             >;
         };
 
+        rmod_layer {
+            bindings = <
+                // 左手
+                &kp CARET &kp AMPERSAND &kp ASTERISK &kp INS &kp PAUSE
+                &none &kp MINUS &kp PLUS &kp PIPE &kp DQT
+                &kp TILDE &kp RGUI &kp RALT &kp RCTL &kp RSFT
+                &mo LOWER &mt LCTL SPC
 
-        // ─────────────────────────────
-        // ADJ
-        // ─────────────────────────────
+                // 右手
+                &kp ENT &mt ADJUST ENT &trans &trans &trans
+                &kp N &kp M &kp COMMA &kp DOT &kp SLASH
+                &kp RALT &kp RGUI &kp RCTL &kp RSFT &none
+                &mt FUNC SLASH &mo RAISE
+            >;
+        };
+
         adjust_layer {
-            display-name = "ADJ";
             bindings = <
-                &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp F6   &kp F7   &kp F8   &kp F9   &kp F12
-                &kp F10  &kp F11  &none    &none    &none      &none    &none    &none    &none    &none
-        &none   &none    &none    &none    &none    &none      &none    &none    &none    &none    &none
-                                    &none   &none   &none      &none    &none    &none
+                // 左手
+                &kp LANG0 &mo LMOD &mo RMOD &none &none
+                &kp RESET &kp BT_CLR &kp OUT_TOG &none &none
+                &kp BOOT &kp BT_NEXT &kp BT_PREV &none &none
+                &mo LOWER &mt LCTL SPC
+
+                // 右手
+                &kp N &kp M &kp COMMA &kp DOT &kp SLASH
+                &kp RALT &kp RGUI &kp RCTL &kp RSFT &none
+                &kp ENT &mt ADJUST ENT &trans &trans &trans
+                &mt FUNC SLASH &mo RAISE
             >;
         };
     };
