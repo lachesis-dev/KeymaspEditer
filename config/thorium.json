@@ -39,11 +39,11 @@
         { "x": 9, "y": 2, "label": "" },
         { "x": 10, "y": 2, "label": "" },
 
-        { "x": 2, "y": 3, "label": "Lower" },
-        { "x": 3, "y": 3, "label": "SPC" },
+        { "x": 3, "y": 3, "label": "Lower" },
+        { "x": 4, "y": 3, "label": "SPC" },
 
-        { "x": 7, "y": 3, "label": "ENT" },
-        { "x": 8, "y": 3, "label": "RAISE" }
+        { "x": 6, "y": 3, "label": "ENT" },
+        { "x": 7, "y": 3, "label": "RAISE" }
       ]
     }
   }
