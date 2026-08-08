@@ -57,30 +57,30 @@
         lower_layer {
             display-name = "lower";
             bindings = <
-           &kp EXCL      &kp DOUBLE_QUOTES  &kp HASH       &kp DLLR    &kp PRCNT     &kp AMPERSAND  &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-           &kp CAPSLOCK  &kp TAB            &kp BACKSPACE  &kp ESCAPE  &kp DELETE    &kp QUESTION   &kp UNDER  &kp PLUS              &kp PIPE               &kp AT_SIGN
-&kp LSHFT  &kp LWIN      &kp LSHFT          &kp LEFT_ALT   &kp LCTRL   &mo 8         &trans         &kp RCTRL  &kp RIGHT_ALT         &kp RSHFT              &kp RWIN       &kp RSHFT
-                                            &trans         &mo 1       &kp SPACE     &kp ENTER      &mo 7      &mo 4
+           &kp EXCL      &kp DOUBLE_QUOTES  &kp HASH       &kp DLLR    &kp PRCNT     &kp AMPERSAND  &kp SQT           &kp MINUS  &kp LCTRL     &kp BACKSLASH
+           &kp CAPSLOCK  &kp TAB            &kp BACKSPACE  &kp ESCAPE  &kp DELETE    &kp QUESTION   &kp EQUAL         &kp PLUS   &kp ASTERISK  &kp AT_SIGN
+&kp LSHFT  &kp LWIN      &kp LSHFT          &kp LEFT_ALT   &kp LCTRL   &mo 8         &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE  &kp SLASH     &kp UNDERSCORE  &kp RSHFT
+                                            &mo 3          &mo 1       &kp SPACE     &kp ENTER      &mo 7             &mo 4
             >;
         };
 
         raise_layer {
             display-name = "raise";
             bindings = <
-           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
-           &kp LPAR      &kp RPAR      &kp LBKT      &kp RBKT      &kp LBRC        &kp RBRC      &kp MINUS     &kp EQUAL     &kp BACKSLASH  &kp SQT
-&kp LSHFT  &trans        &trans        &trans        &trans        &none           &kp GRAVE     &trans        &trans        &trans         &trans        &kp RSHFT
-                                       &trans        &mo 6         &trans          &trans        &mo 2         &mo 4
+           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5        &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
+           &none         &none         &none         &kp LESS_THAN  &kp LBRC            &kp RBRC           &kp GREATER_THAN  &kp EQUAL     &kp SEMICOLON  &kp COLON
+&kp LSHFT  &trans        &trans        &trans        &trans         &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RCTRL         &kp RALT      &kp RSHFT      &kp RIGHT_GUI  &kp RSHFT
+                                       &mo 3         &mo 6          &trans              &trans             &mo 2             &mo 4
             >;
         };
 
         func_layer {
             display-name = "func";
             bindings = <
-        &kp F1      &kp F2  &kp F3  &kp F4  &kp F5          &kp F11        &kp F7        &kp F8  &kp F9  &kp END
-        &kp F6      &kp F7  &kp F8  &kp F9  &kp F10         &kp PAGE_UP    &kp F4        &kp F5  &kp F6  &tog 5
-&trans  &bt BT_CLR  &trans  &trans  &trans  &out OUT_TOG    &kp PAGE_DOWN  &kp F1        &kp F2  &kp F3  &mo 3    &trans
-                            &trans  &none   &kp SPACE       &kp RIGHT_ALT  &kp LEFT_GUI  &mo 4
+           &none  &kp F7  &kp F8  &kp F9  &kp F10      &kp F11        &kp F7  &kp F8  &kp F9  &kp F10
+           &none  &kp F4  &kp F5  &kp F6  &none        &kp PAGE_UP    &kp F4  &kp F5  &kp F6  &tog 5
+&kp LSHFT  &none  &kp F1  &kp F2  &kp F3  &none        &kp PAGE_DOWN  &kp F1  &kp F2  &kp F3  &mo 3    &kp RSHFT
+                          &trans  &none   &kp SPACE    &kp ENTER      &none   &mo 4
             >;
         };
 
@@ -90,17 +90,17 @@
            &kp ESCAPE      &mkp LCLK  &mkp MCLK     &mkp RCLK     &kp C_AC_HOME    &mkp MCLK        &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP
            &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp END          &msc SCRL_LEFT   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &kp LSHFT  &none           &none      &kp INSERT    &kp PG_UP     &kp PAGE_DOWN    &msc SCRL_RIGHT  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT       &kp RSHFT
-                                      &trans        &trans        &trans           &trans           &trans          &mo 4
+                                      &none         &none         &none            &none            &none           &mo 4
             >;
         };
 
         num_layer {
             display-name = "NUM";
             bindings = <
-           &none  &none           &none           &none            &none        &kp SLASH        &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS
-           &none  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none        &kp ASTERISK     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
-&kp LSHFT  &none  &none           &kp DOWN_ARROW  &none            &none        &kp TAB          &kp KP_N1  &kp KP_N2  &kp KP_N3  &lt 3 KP_ENTER  &kp RSHFT
-                                  &none           &kp TAB          &kp SPACE    &kp KP_NUMBER_0  &trans     &none
+           &none  &none           &none           &none            &none        &kp SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS
+           &none  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none        &kp ASTERISK  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
+&kp LSHFT  &none  &none           &kp DOWN_ARROW  &none            &none        &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &lt 3 KP_ENTER  &kp RSHFT
+                                  &none           &kp TAB          &kp SPACE    &kp K_EXEC    &none      &none
             >;
         };
 
