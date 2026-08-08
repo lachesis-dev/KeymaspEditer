@@ -26,7 +26,7 @@
         };
 
         back {
-            bindings = <&kp DEL>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
             layers = <0 1 7>;
         };
@@ -77,10 +77,10 @@
         func_layer {
             display-name = "func";
             bindings = <
-           &none  &kp F7  &kp F8  &kp F9  &kp F10      &kp F11        &kp F7  &kp F8  &kp F9  &kp F10
-           &none  &kp F4  &kp F5  &kp F6  &none        &kp PAGE_UP    &kp F4  &kp F5  &kp F6  &tog 5
-&kp LSHFT  &none  &kp F1  &kp F2  &kp F3  &none        &kp PAGE_DOWN  &kp F1  &kp F2  &kp F3  &mo 3    &kp RSHFT
-                          &trans  &none   &kp SPACE    &kp ENTER      &none   &mo 4
+           &none  &kp F17  &kp F18  &kp F19  &kp F20      &kp F11        &kp F7  &kp F8  &kp F9  &kp F10
+           &none  &kp F14  &kp F15  &kp F16  &none        &kp PAGE_UP    &kp F4  &kp F5  &kp F6  &tog 5
+&kp LSHFT  &none  &kp F11  &kp F12  &kp F13  &none        &kp PAGE_DOWN  &kp F1  &kp F2  &kp F3  &mo 3    &kp RSHFT
+                           &mo 3    &none    &kp SPACE    &kp ENTER      &none   &mo 4
             >;
         };
 
