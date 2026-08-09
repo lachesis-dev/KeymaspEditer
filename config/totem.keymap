@@ -78,7 +78,7 @@
            &kp EXCL      &kp DOUBLE_QUOTES  &kp HASH       &kp DLLR    &kp PRCNT          &kp AMPERSAND  &kp SQT           &kp MINUS  &kp LCTRL     &kp BACKSLASH
            &kp CAPSLOCK  &kp TAB            &kp BACKSPACE  &kp ESCAPE  &kp DELETE         &kp QUESTION   &kp EQUAL         &kp PLUS   &kp ASTERISK  &kp AT_SIGN
 &kp LSHFT  &kp LWIN      &kp LSHFT          &kp LEFT_ALT   &kp LCTRL   &kp PRINTSCREEN    &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE  &kp SLASH     &kp UNDERSCORE  &kp RSHFT
-                                            &mo 4          &trans      &lt 8 ENTER        &kp ENTER      &lt 7 INT_HENKAN  &mo 5
+                                            &mo 4          &trans      &lt 8 LC(SPACE)    &kp ENTER      &lt 7 INT_HENKAN  &mo 5
             >;
         };
 
@@ -88,7 +88,7 @@
            &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5        &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
            &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp LESS_THAN       &kp LBRC            &kp RBRC           &kp GREATER_THAN  &kp EQUAL     &kp SEMICOLON  &kp COLON
 &kp LSHFT  &trans        &trans             &trans        &trans              &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RCTRL         &kp RALT      &kp RSHFT      &kp RIGHT_GUI  &kp RSHFT
-                                            &mo 4         &lt 6 INT_MUHENKAN  &kp ENTER           &lt 8 ENTER        &trans            &mo 5
+                                            &mo 4         &lt 6 INT_MUHENKAN  &kp SPACE           &lt 8 ENTER        &trans            &mo 5
             >;
         };
 
