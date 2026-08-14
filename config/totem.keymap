@@ -44,12 +44,6 @@
             layers = <1>;
         };
 
-        zaq {
-            bindings = <&zaq_macro>;
-            key-positions = <0 1>;
-            layers = <2>;
-        };
-
         ndq {
             bindings = <&ndq_id_macro>;
             key-positions = <1 2>;
@@ -72,6 +66,12 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <7 8>;
             layers = <1>;
+        };
+
+        zaq {
+            bindings = <&zaq_macro>;
+            key-positions = <4 3>;
+            layers = <2>;
         };
     };
 
