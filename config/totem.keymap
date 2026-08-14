@@ -150,10 +150,10 @@
         raise_layer {
             display-name = "raise";
             bindings = <
-           &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4        &kp NUMBER_5     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-           &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp K_PREV          &kp K_STOP       &kp K_PP      &kp K_NEXT    &none         &none         &none
-&kp LSHFT  &trans        &trans             &trans        &trans              &kp LC(LS(O))    &none         &kp RCTRL     &kp RALT      &kp RSHFT     &kp RIGHT_GUI  &kp RSHFT
-                                            &mo 4         &lt 6 INT_MUHENKAN  &kp SPACE        &lt 8 ENTER   &trans        &mo 5
+           &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3   &kp NUMBER_4        &kp NUMBER_5     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+           &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOL_UP   &kp K_PREV          &kp K_STOP       &kp K_PP      &kp K_NEXT    &none         &none         &none
+&kp LSHFT  &kp LMETA     &kp LSHFT          &kp RIGHT_ALT  &kp LCTRL           &kp LC(LS(O))    &none         &kp RCTRL     &kp RALT      &kp RSHFT     &kp RIGHT_GUI  &kp RSHFT
+                                            &mo 4          &lt 6 INT_MUHENKAN  &kp SPACE        &lt 8 ENTER   &trans        &mo 5
             >;
         };
 
