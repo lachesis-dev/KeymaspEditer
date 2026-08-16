@@ -141,7 +141,7 @@
             display-name = "lower";
             bindings = <
            &none         &none      &none          &none       &none              &kp C_AL_SCREENSAVER   &kp PAUSE_BREAK   &kp MINUS         &kp EQUAL          &none
-           &kp CAPSLOCK  &kp TAB    &kp BACKSPACE  &kp ESCAPE  &kp DELETE         &kp SCROLLLOCK         &none             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+           &kp CAPSLOCK  &kp TAB    &kp BACKSPACE  &kp ESCAPE  &kp DELETE         &kp SCROLLLOCK         &kp GRAVE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
 &kp LSHFT  &kp LWIN      &kp LSHFT  &kp LEFT_ALT   &kp LCTRL   &kp PRINTSCREEN    &none                  &none             &kp SEMICOLON     &kp SQT            &kp BACKSLASH  &kp RSHFT
                                     &mo 4          &trans      &lt 8 LC(SPACE)    &mt RIGHT_SHIFT ENTER  &lt 7 INT_HENKAN  &mo 5
             >;
