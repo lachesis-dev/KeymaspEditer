@@ -1,23 +1,19 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_TOTEM_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "THORIUM34"
+    
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
 if SHIELD_THORIUM34_LEFT || SHIELD_THORIUM34_RIGHT
-    config ZMK_SPLIT
-        default y
 
-    config ZMK_BLE
-        default y
-endif
+config ZMK_SPLIT
+    default y
 
-if SHIELD_THORIUM34_LEFT
-    config ZMK_SPLIT_ROLE_CENTRAL
-        default y
-
-    config ZMK_KEYBOARD_NAME
-        default "Thorium34"
-
-    config ZMK_USB
-        default y
-endif
-
-if SHIELD_THORIUM34_RIGHT
-    config ZMK_USB
-        default n
 endif
