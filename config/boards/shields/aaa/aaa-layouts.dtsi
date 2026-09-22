@@ -1,0 +1,13 @@
+/ {
+    physical_layout0: physical_layout0 {
+        compatible = "zmk,physical-layout";
+        display-name = "AAA 2x2";
+
+        keys =
+            <&key_physical_attrs 100 100   0   0   0 0 0>
+            , <&key_physical_attrs 100 100 100   0   0 0 0>
+            , <&key_physical_attrs 100 100   0 100   0 0 0>
+            , <&key_physical_attrs 100 100 100 100   0 0 0>
+            ;
+    };
+};
